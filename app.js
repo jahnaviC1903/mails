@@ -92,6 +92,18 @@ app.get("/register", function(req, res){
   res.render("register");
 });
 
+app.get("/history", function(req, res){
+  res.render("history");
+});
+
+app.get("/Scheduler", function(req, res){
+  res.render("Scheduler");
+});
+
+app.get("/compose", function(req, res){
+  res.render("compose");
+});
+
 app.get("/main", function(req, res){
   if (req.isAuthenticated()){
     res.render("main");
@@ -105,6 +117,7 @@ app.get("/logout", function(req, res){
   req.logout();
   res.redirect("/");
 });
+
 
 app.post("/register", function(req, res){
 
@@ -144,6 +157,29 @@ app.post('/send',(req,res)=>{         //in the form put action="send" method="po
       //one of the fields in compose form should be messages
       const output=`<p>${req.body.messages}</p>`;
       console.log(output);
+      const date = new Date();
+      const hour = date.getHours();
+      const min = date.getMinutes();
+      console.log(hour + ":" + min);
+      const scheduler = req.body.scheduler;
+      let timer = "";
+    
+      switch (scheduler) {
+        case "Reccurent":
+          timer = "30 * * * * *";
+          break;
+        case "Weekly":
+          timer = "* * * * * 1";
+          break;
+        case "Monthly":
+          timer = "* * * 1 * *";
+          break;
+        case "Yearly":
+          timer = "* * * * 12 *";
+          break;
+        default :
+          console.log("Error");
+      }
 
 // const output=`<p>${req.body.messages}</p>`;
 let transporter = nodemailer.createTransport({

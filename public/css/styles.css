@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@100&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+* {
+  box-sizing: border-box;
+}
+
 
 body {
   background-color: #E8ECEF;
@@ -13,4 +20,184 @@ body {
   font-size: 2rem;
   color: #fff;
   background-color: #000;
+}
+
+.navbar{
+  background-color: #dcdcf5;
+}
+
+.container{
+  padding-left: 2%;
+  padding-right: 2%;
+  display: block;
+}
+
+.main{
+  display: flex;
+}
+
+.main_body {
+  background: #f5f5dc;
+  width: 20%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 10px 18px #888888;
+  color: rgb(58, 126, 153);
+}
+
+.mail{
+  background: whitesmoke;
+  width: 80%;
+  height: 100vh;
+  box-shadow: 1px 10px 18px #888888;
+  color: rgb(58, 126, 153);
+
+}
+
+.mail_compose {
+  padding-left: 2%;
+  padding-right: 2%;
+  display: block;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.log_body {
+  height: 100%;
+  margin-top: none;
+  /* background-color: yellow; */
+  overflow-y: scroll;
+}
+
+
+.home {
+  cursor: pointer;
+  height: 50px;
+  width: 92%;
+  display: flex;
+  padding-left: 5%;
+  padding-top: 15px;
+  align-items: center;
+  color: rgb(58, 126, 153);
+  font-weight: bold;
+}
+
+.home_icon{
+  padding-bottom: 15px;
+  vertical-align: middle; 
+}
+
+.history {
+  cursor: pointer;
+  height: 50px;
+  width: 92%;
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+  padding-top: 15px;
+  color: rgb(58, 126, 153);
+  font-weight: bold;
+
+}
+
+.history_icon{
+  padding-bottom: 15px;
+}
+
+.scheduler {
+  cursor: pointer;
+  height: 50px;
+  width: 92%;
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+  padding-top: 15px;
+  color: rgb(58, 126, 153);
+  font-weight: bold;
+}
+
+.schedule_icon{
+  padding-bottom: 15px;
+}
+.active_navigator {
+  border-radius: 10px;
+  background-color: rgb(212, 238, 255);
+  /* box-shadow: 1px 1px 2px #888888; */
+  color: rgb(69, 179, 230);
+}
+
+.compose {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  background-color: rgb(69, 179, 230);
+  border: none;
+  border-radius: 10px;
+  height: 40px;
+  width: 130px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+}
+
+.log_header{
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.add_icon{
+  padding-bottom: 15px;
+
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.btn_compose {
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  background-color: white;
+  color: #3c4043;
+  display: inline-flex;
+  box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
+}
+.btn_compose .text {
+  margin-left: 1px;
+  font-family: Verdana, serif;
+  font-size: 16px;
+  line-height: 54px;
+  display: none;
+  width: 150px;
+  border-radius: 90px;
+  text-decoration: none;
+}
+.btn_compose::before {
+background-image: url(https://www.gstatic.com/images/icons/material/colored_icons/1x/create_32dp.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 32px;
+  content: '';
+  min-width: 56px;
+  display: block;
+}
+
+.btn_compose:hover {
+background-position: 10px;
+width: 150px;
+border-radius: 90px;
+text-decoration: none;
+}
+.btn_compose:hover .text {
+display: block;
+}
+
+.selected{
+  background-color: khaki;
 }

@@ -1,4 +1,18 @@
 
-
+<script name= "messages">
+    $('#summernote').summernote({
+    placeholder: 'Message',
+    tabsize: 2,
+    height: 100
+  });
+  var markupStr = $('#summernote').summernote('code');
+  $("p").each(function () {
+    if (!$(this).text().trim().length) {
+      $(this).remove();
+    }
+  });
+  </script>
+<script src="JS/script"></script>
+  
 </body>
 </html>
